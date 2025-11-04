@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conitop's Commission Sheet</title>
-    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
-    <!-- Removed Inter font link and switched to Comic Sans MS --><style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
         body {
             /* Changed font to Comic Sans MS, with a cursive fallback */
             font-family: 'Comic Sans MS', cursive;
@@ -59,27 +59,37 @@
             background-color: #C0BDD1; /* Slightly darker pastel for contrast */
             border: 2px dashed #8C78D8;
             color: #5C4B5C;
+            /* Adjustments for better mobile stacking */
             display: flex;
-            align-items: center;
+            align-items: flex-start; /* Align content to the start */
             justify-content: center;
+            flex-direction: column; /* Stack content vertically */
             font-size: 0.9rem;
             text-align: center;
             padding: 1rem;
             margin-top: 1rem;
+            width: 100%; /* Ensure full width on mobile */
+        }
+        /* NEW RULE: Make images inside the placeholder responsive */
+        .image-placeholder img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0.5rem 0; /* Add vertical spacing between stacked images */
         }
     </style>
 </head>
 <body class="p-4 sm:p-8">
 
     <div class="max-w-6xl mx-auto">
-        <!-- HEADER / INTRO SECTION --><header class="text-center py-12 mb-10 bg-header-blend rounded-xl shadow-lg">
+        <header class="text-center py-12 mb-10 bg-header-blend rounded-xl shadow-lg">
             <h1 class="text-5xl font-extrabold text-header-primary tracking-tight mb-2">
                 Conitop's Art Commissions
             </h1>
             <p class="text-xl text-header-secondary">Hello! Welcome to my commission sheet. Find everything you need to know below.</p>
         </header>
 
-        <!-- ABOUT ME SECTION --><section class="mb-12">
+        <section class="mb-12">
             <h2 class="text-3xl font-bold section-header pb-3 mb-6 text-section-title">
                 <span class="text-3xl mr-2">🌸</span>
                 About Me
@@ -95,7 +105,6 @@
                 <div class="card p-6 rounded-lg">
                     <h3 class="text-xl font-semibold mb-3 text-card-title">Social Links</h3>
                     <div class="space-y-2">
-                        <!-- Reverted to text links -->
                         <a href="https://t.me/Conitoppp" target="_blank" class="block text-gray-700 hover:text-link-hover-pastel transition duration-150">
                             <span class="font-medium">Telegram:</span> @Conitoppp
                         </a>
@@ -113,7 +122,7 @@
             </div>
         </section>
 
-        <!-- DO's AND DON'Ts SECTION --><section class="mb-12">
+        <section class="mb-12">
             <h2 class="text-3xl font-bold section-header pb-3 mb-6 text-section-title">
                 <span class="text-3xl mr-2">✅❌</span>
                 DO's and DON'Ts
@@ -143,7 +152,7 @@
             </div>
         </section>
         
-        <!-- TERMS OF SERVICE (T.O.S.) --><section class="mb-12">
+        <section class="mb-12">
             <h2 class="text-3xl font-bold section-header pb-3 mb-6 text-section-title">
                 <svg xmlns="http://www.w3.org/2000/svg" class="inline w-7 h-7 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
@@ -153,29 +162,25 @@
             <div class="card p-6 rounded-lg text-gray-700 space-y-3">
                 <p>✧ I reserve the rights to all artwork and commissioned works.</p>
                 <p>✧ I may slightly modify the color palette of the characters so that they fit better with my style. If you disagree with this, please let me know before starting your commission.</p>
-                <!-- MODIFICATION: Changed ** to <strong> for explicit bolding -->
                 <p>✧ Do <strong>NOT</strong> commission XXX-rated artwork from me if you or your characters are <strong>under 18 years old</strong>.</p>
                 <p>✧ Ask for DO and DON’T if you are not sure how I feel about the piece you are looking to commission.</p>
                 <p>✧ You as a customer have the complete right to request a full refund <strong>before</strong> the piece is started.</p>
-                <!-- MODIFICATION: Changed ** to <strong> for explicit bolding -->
                 <p class="font-semibold text-card-title">By reading this and moving forward with the commissioning process, I'll assume that you <strong>FULLY AGREE</strong> with my T.O.S.</p>
             </div>
         </section>
 
-        <!-- PRICING SECTION --><section class="mb-12">
-            <!-- MODIFICATION: Wrapped title in a flex container to add the (USD) text -->
+        <section class="mb-12">
             <div class="flex items-baseline flex-wrap gap-x-4 section-header pb-3 mb-6">
                 <h2 class="text-3xl font-bold text-section-title">
                     <span class="text-3xl mr-2">🎨</span>
                     Pricing and Styles
                 </h2>
-                <!-- NEW TEXT: Added the (All prices are in USD) text -->
                 <span class="text-lg font-normal text-gray-700">(All prices are in USD)</span>
             </div>
             
-            <!-- PRICING CARDS CONTAINER --><div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <!-- Sketch Pricing --><div class="card p-6 rounded-lg border text-border-green-pastel">
+                <div class="card p-6 rounded-lg border text-border-green-pastel">
                     <h3 class="text-3xl font-extrabold text-card-title mb-4">Sketch</h3>
                     <div class="space-y-2 mb-4">
                         <p class="flex justify-between text-lg"><span class="font-medium">Headshot/Icon</span> <span class="text-green-pastel">$11</span></p>
@@ -190,11 +195,13 @@
                         <li class="flex justify-between">Simple Background <span class="text-green-pastel">+$2</span></li>
                     </ul>
                     <div class="image-placeholder">
-                        <p>Examples!<br><img src="images/sketch_example_1.jpg.JPEG" alt="Sketch Example"><img src="images/sketch_example_2.jpg.png" alt="Sketch Example"></p>
+                        <p>Examples!</p>
+                        <img src="images/sketch_example_1.jpg.JPEG" alt="Sketch Example">
+                        <img src="images/sketch_example_2.jpg.png" alt="Sketch Example">
                     </div>
                 </div>
 
-                <!-- Black and White Pricing --><div class="card p-6 rounded-lg border text-border-green-pastel">
+                <div class="card p-6 rounded-lg border text-border-green-pastel">
                     <h3 class="text-3xl font-extrabold text-card-title mb-4">Black and White</h3>
                     <div class="space-y-2 mb-4">
                         <p class="flex justify-between text-lg"><span class="font-medium">Headshot/Icon</span> <span class="text-green-pastel">$12</span></p>
@@ -206,11 +213,12 @@
                         <li class="flex justify-between">NSFW <span class="text-green-pastel">+$10</span></li>
                     </ul>
                     <div class="image-placeholder">
-                        <p>Examples!<br><img src="images/bwe_xample_1.jpg.JPEG" alt="Black & White Example"></p>
+                        <p>Examples!</p>
+                        <img src="images/bwe_xample_1.jpg.JPEG" alt="Black & White Example">
                     </div>
                 </div>
 
-                <!-- Cell Shading Pricing --><div class="card p-6 rounded-lg border text-border-green-pastel">
+                <div class="card p-6 rounded-lg border text-border-green-pastel">
                     <h3 class="text-3xl font-extrabold text-card-title mb-4">Cell Shading</h3>
                     <div class="space-y-2 mb-4">
                         <p class="flex justify-between text-lg"><span class="font-medium">Headshot/Icon</span> <span class="text-green-pastel">$15</span></p>
@@ -222,11 +230,12 @@
                         <li class="flex justify-between">NSFW <span class="text-green-pastel">+$10</span></li>
                     </ul>
                     <div class="image-placeholder">
-                        <p>Examples!<br><img src="images/cell1.png" alt="Cell Shading Example"></p>
+                        <p>Examples!</p>
+                        <img src="images/cell1.png" alt="Cell Shading Example">
                     </div>
                 </div>
 
-                <!-- Full Render Pricing --><div class="card p-6 rounded-lg border text-border-green-pastel">
+                <div class="card p-6 rounded-lg border text-border-green-pastel">
                     <h3 class="text-3xl font-extrabold text-card-title mb-4">Full Render</h3>
                     <div class="space-y-2 mb-4">
                         <p class="flex justify-between text-lg"><span class="font-medium">Headshot/Icon</span> <span class="text-green-pastel">$20</span></p>
@@ -234,12 +243,14 @@
                         <p class="flex justify-between text-lg"><span class="font-medium">Fullbody</span> <span class="text-green-pastel">$40</span></p>
                     </div>
                     <div class="image-placeholder">
-                        <p>Examples!<br><img src="images/full_render_example_1.jpg.jpg" alt="Full Render Example"><img src="images/render1.png" alt="Full Render Example"></p>
+                        <p>Examples!</p>
+                        <img src="images/full_render_example_1.jpg.jpg" alt="Full Render Example">
+                        <img src="images/render1.png" alt="Full Render Example">
                     </div>
                 </div>
             </div>
             
-            <!-- ADDITIONAL INFO --><div class="mt-8 card p-6 rounded-lg">
+            <div class="mt-8 card p-6 rounded-lg">
                 <h4 class="text-2xl font-semibold text-card-title mb-3">Additional Information</h4>
                 <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
                     <li>Extra characters cost double the base price.</li>
@@ -249,14 +260,13 @@
             </div>
         </section>
 
-        <!-- FOOTER --><footer class="text-center mt-12 py-6 border-t border-b0a6f4">
+        <footer class="text-center mt-12 py-6 border-t border-b0a6f4">
             <p class="text-gray-600">Thank you for reading!</p>
             <p class="text-sm text-gray-500">Content sourced and combined from the provided Carrd links.</p>
         </footer>
 
     </div>
 
-    <!-- SIMPLE SCRIPT FOR CONSOLE VISIBILITY CHECK -->
     <script>
         console.log("--- Site Status ---");
         console.log("Commission Sheet loaded successfully. No complex services (Firebase/Auth) are running.");
@@ -265,8 +275,6 @@
 
 </body>
 </html>
-
-
 
 
 
