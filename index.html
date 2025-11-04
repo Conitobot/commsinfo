@@ -7,8 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            /* Changed font to Comic Sans MS, with a cursive fallback */
-            font-family: 'Comic Sans MS', cursive;
+            /* Fuente modificada para mejor compatibilidad: incluye Comic Sans y alternativas dibujadas a mano */
+            font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', 'Marker Felt', 'Purisa', cursive;
             background-color: #F8F4E3; /* Light Cream */
             color: #5C4B5C; /* Darker Pastel Purple/Gray */
         }
@@ -59,23 +59,23 @@
             background-color: #C0BDD1; /* Slightly darker pastel for contrast */
             border: 2px dashed #8C78D8;
             color: #5C4B5C;
-            /* Adjustments for better mobile stacking */
+            /* Ajustes para mejor apilamiento y vista móvil */
             display: flex;
-            align-items: flex-start; /* Align content to the start */
+            align-items: flex-start;
             justify-content: center;
-            flex-direction: column; /* Stack content vertically */
+            flex-direction: column;
             font-size: 0.9rem;
             text-align: center;
             padding: 1rem;
             margin-top: 1rem;
-            width: 100%; /* Ensure full width on mobile */
+            width: 100%;
         }
-        /* NEW RULE: Make images inside the placeholder responsive */
+        /* NUEVA REGLA: Hace que las imágenes sean responsivas */
         .image-placeholder img {
             max-width: 100%;
             height: auto;
             display: block;
-            margin: 0.5rem 0; /* Add vertical spacing between stacked images */
+            margin: 0.5rem 0;
         }
     </style>
 </head>
